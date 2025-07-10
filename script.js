@@ -1,4 +1,4 @@
-let expenses = [];
+ let expenses = [];
         let categories = {
             alimentacao: { name: '🍽️ Alimentação', emoji: '🍽️' },
             transporte: { name: '🚗 Transporte', emoji: '🚗' },

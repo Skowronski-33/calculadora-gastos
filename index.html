@@ -9,7 +9,7 @@
 <script src="script.js" defer></script>
 
 <body>
-   <div class="container">
+    <div class="container">
         <div class="header">
             <h1>💰 Calculadora de Gastos Pessoais</h1>
             <p>Controle suas finanças de forma simples e eficiente</p>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <br>
+
                 <!-- Adicionar Gasto -->
                 <div class="card">
                     <h2>Adicionar Gasto</h2>
@@ -49,13 +49,13 @@
                         </div>
                         <div class="form-group">
                             <label for="expenseAmount">Valor (R$):</label>
-                            <input type="number" step="0.01" id="expenseAmount" placeholder="0,00">
+                            <input type="text" id="expenseAmount" placeholder="R$ 0,00" oninput="formatCurrency(this)">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="expenseCategory">Categoria:</label>
-                            <select id="expenseCategory">
+                            <select id="expenseCategory" onchange="toggleOtherCategory()">
                                 <option value="alimentacao">🍽️ Alimentação</option>
                                 <option value="transporte">🚗 Transporte</option>
                                 <option value="moradia">🏠 Moradia</option>
@@ -65,6 +65,7 @@
                                 <option value="compras">🛍️ Compras</option>
                                 <option value="outros">📦 Outros</option>
                             </select>
+                            <input type="text" id="otherCategoryInput" placeholder="Digite o tipo de gasto..." style="display: none; margin-top: 10px; padding: 12px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 16px;">
                         </div>
                         <div class="form-group">
                             <label for="expenseDate">Data:</label>
@@ -73,7 +74,7 @@
                     </div>
                     <button class="btn" onclick="addExpense()">Adicionar Gasto</button>
                 </div>
-<br>
+
                 <!-- Lista de Gastos -->
                 <div class="card">
                     <h2>📋 Lista de Gastos</h2>
@@ -115,7 +116,7 @@
                     </div>
                     <div id="statusIndicator" class="status-indicator"></div>
                 </div>
-<br>
+
                 <!-- Gastos por Categoria -->
                 <div class="card">
                     <h2>🎯 Gastos por Categoria</h2>
@@ -123,9 +124,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- Rodapé -->
+        <footer style="text-align: center; padding: 20px; color: #718096; border-top: 1px solid #e2e8f0; margin-top: 30px;">
+            <p>💻 Desenvolvido por <strong>Pedro Henrique Skowronski</strong></p>
+            <p style="font-size: 14px; margin-top: 5px;">Calculadora de Gastos Pessoais - 2025</p>
+        </footer>
     </div>
-    <footer>
-        <p>Desenvolvido por Pedro Henrique Skowronski<a href="
 
 
 </body>
